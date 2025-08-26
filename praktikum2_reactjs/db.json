@@ -1,0 +1,9 @@
+{
+  "todos": [
+    { "id": 1, "task": "Proselite" },
+    { "id": 2, "task": "Sanderson" },
+    { "id": 3, "task": "Ghost" },
+    { "id": 4, "task": "REST API" },
+    { "id": 5, "task": "MYSQL" }
+  ]
+}
