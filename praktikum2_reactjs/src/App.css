@@ -1,7 +1,46 @@
+/* Reset margin & padding, set font dan background gambar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('./assets/images/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Container utama dengan efek glassmorphism */
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.2); /* putih transparan */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+  color: #fff; /* tulisan putih supaya kontras */
+}
+
+/* Heading utama */
+h1 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Untuk App styling, kalau dipakai */
 .App {
   text-align: center;
 }
 
+/* Logo animasi */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,7 +53,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: transparent;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,6 +67,7 @@
   color: #61dafb;
 }
 
+/* Animasi spin */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +75,107 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Style input dan tombol di form */
+.todo-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-input-group input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.todo-input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.todo-input-group input:focus {
+  border-color: #61dafb;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.todo-input-group button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.todo-input-group button:hover {
+  background-color: #21a1f1;
+}
+
+/* List dan item todo */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.todo-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.todo-item input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Tombol edit dan hapus */
+.todo-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-buttons button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.todo-buttons .edit-btn {
+  background-color: #ffc107;
+}
+
+.todo-buttons .edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.todo-buttons .delete-btn {
+  background-color: #e53935;
+}
+
+.todo-buttons .delete-btn:hover {
+  background-color: #ab2727;
 }
